@@ -17,7 +17,11 @@ const LoginScreen = ({ navigation, route }) => {
 
   const handleLogin = () => {
     if (username && password) {
-      navigation.navigate('Welcome', { username });
+      // Simulate fetching user data including first and last names
+      const firstName = 'John'; // Replace with actual data
+      const lastName = 'Doe';    // Replace with actual data
+      
+      navigation.navigate('Welcome', { username, firstName, lastName });
     } else {
       Alert.alert('Please enter both username and password.');
     }
